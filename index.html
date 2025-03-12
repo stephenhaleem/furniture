@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FurniCraft</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dela+Gothic+One&family=Dosis:wght@200..800&family=Luckiest+Guy&family=Rowdies:wght@300;400;700&family=Tangerine:wght@400;700&display=swap");
+    </style>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <meta name="theme-color" content="#fce443" />
+    <meta name="msapplication-navbutton-color" content="#fce443" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fce443" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+  </head>
+  <body>
+    <section id="hero">
+      <header class="header" id="header">
+        <nav class="nav container">
+          <a href="#" class="nav__logo"> FurniCraft </a>
+
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <i class="ri-arrow-right-up-line"></i>
+                  <span class="nav__text">home</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#products" class="nav__link">
+                  <i class="ri-arrow-right-up-line"></i>
+                  <span class="nav__text">products</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="projects.html" class="nav__link">
+                  <i class="ri-arrow-right-up-line"></i>
+                  <span class="nav__text">order</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">
+                  <i class="ri-arrow-right-up-line"></i>
+                  <span class="nav__text">about us</span>
+                </a>
+              </li>
+            </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+              <i class="ri-close-large-line"></i>
+            </div>
+          </div>
+
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+          </div>
+        </nav>
+      </header>
+      <div class="hero-content">
+        <h2>Crafting Timeless Furniture for Modern Living</h2>
+        <a href="#products" class="show-more-btn">Explore Our Collection</a>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2>Products</h2>
+      <div class="product-categories">
+        <div class="category">
+          <img src="assests/sofa.png" alt="Chairs Icon" />
+          <h3>Chairs</h3>
+          <p>Modern seating for the office or home</p>
+        </div>
+        <div class="category">
+          <img src="assests/table.png" alt="Tables Icon" />
+          <h3>Tables</h3>
+          <p>Elegant surfaces for dining or work</p>
+        </div>
+        <div class="category">
+          <img src="assests/window-frame.png" alt="Interior Stuff Icon" />
+          <h3>Interior Stuff</h3>
+          <p>Stylish decor to elevate your space</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured">
+      <img
+        src="images/ca41235d-f8c9-4685-9114-d68e5e07097e.png"
+        alt="Featured Chair"
+      />
+      <div class="featured-content">
+        <h2>Lux Chair</h2>
+        <div class="italics">
+          <p><i>The yellow leather edition.</i></p>
+        </div>
+
+        <p>
+          A stunning piece of furniture that combines modern design with
+          timeless elegance. Its distinctive shape and bright yellow color make
+          it a real eye-catcher in any room. The chair is not only stylish but
+          also comfortable and soft.
+        </p>
+        <a href="#order" class="learn-more-btn">Learn More</a>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Place an Order</h2>
+      <a
+        href="https://wa.me/your-number?text=Hi%2C%20I%27m%20interested%20in%20your%20furniture!"
+        class="whatsapp-btn"
+        >Order via WhatsApp</a
+      >
+    </section>
+
+    <footer>
+      <p>© 2025 FurniCraft</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

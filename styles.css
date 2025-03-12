@@ -1,0 +1,467 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e2b86a;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 5px 14px;
+  background-color: transparent;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header.scrolled {
+  background-color: #183018;
+}
+
+.nav {
+  position: relative;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  font-family: "montserrat", serif;
+  font-size: 1.9rem;
+  color: #e2b86a;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.nav__close,
+.nav__toggle {
+  display: flex;
+  color: #e2b86a;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 1150px) {
+  .nav__menu {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    background-color: #183018;
+    width: 100%;
+    height: 200vh;
+    padding: 6rem 3.5rem 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: left 0.4s;
+  }
+
+  .nav__item {
+    transform: translateX(-150px);
+    visibility: hidden;
+    transition: transform 0.4s ease-out, visibility 0.4s;
+  }
+
+  .nav__item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .nav__item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .nav__item:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .nav__item:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  .nav__item:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+}
+
+.nav__list,
+.nav__social {
+  display: flex;
+}
+
+.nav__list {
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.nav__link {
+  position: relative;
+  color: #e2b86a;
+  font-size: 2.1rem; /* Increased font size */
+  font-weight: 502;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.4s;
+}
+
+.nav__link i {
+  font-size: 2rem;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.nav__link .nav__text {
+  position: relative;
+  transition: margin 0.4s;
+  font-size: 1.2rem;
+  color: #e2b86a;
+  font-family: "montserrat", serif;
+}
+
+.nav__link .nav__text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: #e2b86a;
+  transition: width 0.4s ease-out;
+}
+
+/* Animation link on hover */
+.nav__link:hover .nav__text {
+  margin-left: 2.5rem;
+}
+
+.nav__link:hover i {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__link:hover .nav__text::after {
+  width: 100%;
+}
+
+/* Sibling fade animation */
+.nav__list:has(.nav__link:hover) .nav__link:not(:hover) {
+  opacity: 0.4;
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* Show menu */
+.show-menu {
+  left: 0;
+}
+
+/* Animation link when displaying menu */
+.show-menu .nav__item {
+  visibility: visible;
+  transform: translateX(0);
+}
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .nav {
+    height: calc(3.5rem + 2rem);
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+
+  .nav__link {
+    font-size: 0.938rem;
+  }
+
+  .nav__link i {
+    font-size: 1.5rem;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3.5rem;
+    margin-left: -500px;
+  }
+
+  .nav__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 3.5rem;
+    font-size: 2.5rem;
+    background-color: #183018;
+  }
+}
+
+#hero {
+  position: relative;
+  text-align: center;
+  background-image: url("images/sofa-living-room-decorated-with-brazilian-folklore-design.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  min-height: 600px;
+  height: 100vh;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+#hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#hero h2 {
+  font-family: "Tangerine", serif;
+  font-size: 6em; /* Increased size */
+  color: #e2b86a;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+  transform: translateY(20px);
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.show-more-btn {
+  background-color: #e2b86a;
+  color: #1a3c34;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+  transform: translateY(20px);
+  white-space: nowrap; /* Prevent button text from breaking */
+}
+
+.show-more-btn:hover {
+  background-color: #fff;
+}
+
+#products {
+  background-color: #dfd5c8; /* Beige */
+  padding: 60px 20px;
+  text-align: center;
+  color: #333;
+}
+
+#products h2 {
+  font-family: "Passions Conflict", serif;
+  font-size: 5.5em;
+  margin-bottom: 60px;
+}
+
+.product-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-content: center;
+}
+
+.category {
+  text-align: center;
+  max-width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.category:hover {
+  transform: translateY(-10px);
+}
+
+.category img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: brightness(1) contrast(1);
+}
+
+.category h3 {
+  font-family: "Passions Conflict", serif;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.category p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+#featured {
+  background-color: #dfd5c8;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  height: 80vh;
+  flex-direction: column; /* Ensure content is stacked vertically */
+}
+
+#featured img {
+  max-width: 400px;
+  height: auto;
+}
+
+.featured-content {
+  max-width: 500px;
+  color: #333;
+  text-align: center; /* Center align the text */
+}
+
+.featured-content h2 {
+  font-family: "Passions Conflict", serif;
+  font-size: 6.5em;
+  margin-bottom: 20px;
+}
+
+.featured-content p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.learn-more-btn {
+  background-color: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #d4af37;
+  color: #1a3c34;
+}
+
+#order {
+  background-color: #1a3c34;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#order h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.whatsapp-btn {
+  background-color: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #d4af37;
+  color: #1a3c34;
+}
+
+footer {
+  background-color: #1a3c34;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #d4af37;
+}
+
+footer p {
+  color: #d4af37;
+  font-size: 0.9em;
+}
+@media (max-width: 1285px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid #e2b86a;
+    border-bottom: 2px solid #e2b86a;
+    display: none;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: white;
+  }
+  .navbar.active {
+    display: block;
+  }
+}
