@@ -306,6 +306,7 @@ a {
   background-color: #dfd5c8; /* Beige */
   padding: 60px 20px;
   text-align: center;
+  justify-content: center;
   color: #333;
 }
 
@@ -318,14 +319,18 @@ a {
 .product-categories {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 200px;
   justify-content: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .category {
   text-align: center;
   max-width: 200px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .category:hover {
@@ -386,9 +391,9 @@ a {
 }
 
 .learn-more-btn {
-  background-color: transparent;
+  background-color: #d4af37;
   border: 2px solid #d4af37;
-  color: #d4af37;
+  color: #1a3c34;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -426,6 +431,54 @@ a {
 .whatsapp-btn:hover {
   background-color: #d4af37;
   color: #1a3c34;
+}
+
+#about-us {
+  background-color: #dfd5c8; /* Soft background */
+  padding: 80px 10%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-family: "Passions Conflict", serif;
+  font-size: 5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #d4af37;
+  color: #1a3c34;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #555;
 }
 
 footer {

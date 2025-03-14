@@ -20,7 +20,6 @@ gsap.from("#hero img", {
   ease: "power3.out",
 });
 
-// Products section animations
 gsap.from("#products h2", {
   duration: 1,
   opacity: 0,
@@ -37,7 +36,6 @@ gsap.from(".category", {
   ease: "power3.out",
 });
 
-// Featured section animations
 gsap.from("#featured img", {
   duration: 1,
   opacity: 0,
@@ -53,7 +51,6 @@ gsap.from(".featured-content", {
   ease: "power3.out",
 });
 
-// Order section animation
 gsap.from("#order", {
   duration: 1,
   opacity: 0,
@@ -85,4 +82,54 @@ window.addEventListener("scroll", function () {
   } else {
     header.classList.remove("scrolled");
   }
+});
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".about-img", {
+  opacity: 0,
+  x: -100,
+  duration: 1.2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about-container",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+});
+
+gsap.from(".about-heading", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about-container",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
+});
+
+gsap.from(".about-description", {
+  opacity: 0,
+  y: 30,
+  stagger: 0.3,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".about-container",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
+});
+
+gsap.from(".about-btn", {
+  opacity: 0,
+  scale: 0.8,
+  duration: 1,
+  ease: "back.out(1.7)",
+  scrollTrigger: {
+    trigger: ".about-container",
+    start: "top 85%",
+    toggleActions: "play none none none",
+  },
 });
