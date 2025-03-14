@@ -142,6 +142,7 @@ a {
   font-size: 1.2rem;
   color: #e2b86a;
   font-family: "montserrat", serif;
+  text-transform: uppercase;
 }
 
 .nav__link .nav__text::after {
@@ -223,7 +224,6 @@ a {
     align-items: center;
     column-gap: 3.5rem;
     font-size: 2.5rem;
-    background-color: #183018;
   }
 }
 
