@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order - FurniCraft</title>
+    <link rel="stylesheet" href="order.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">FurniCraft</div>
+      <ul class="nav-links">
+        <li><a href="#">Sofas</a></li>
+        <li><a href="#">Chairs</a></li>
+        <li><a href="#">Tables</a></li>
+        <li><a href="#">Beds</a></li>
+        <li><a href="#">Cabinets</a></li>
+      </ul>
+      <div
+        class="cart"
+        onclick="window.location.href='cart.html'"
+        style="cursor: pointer"
+      >
+        <span id="cart-count">0</span>
+        🛒
+      </div>
+    </nav>
+
+    <!-- Products Section -->
+    <div class="products">
+      <div class="product-card" data-name="Luxury Sofa" data-price="500000">
+        <img src="images/11444657.png" alt="Luxury Sofa" />
+        <h3 class="product-name">Luxury Sofa</h3>
+        <p class="product-price">
+          ₦500,000 <span class="discount">₦650,000</span>
+        </p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-name="Elegant Chair" data-price="250000">
+        <img src="images/760.jpg" alt="Elegant Chair" />
+        <h3 class="product-name">Elegant Chair</h3>
+        <p class="product-price">₦250,000</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product sold-out">
+        <img src="table.jpg" alt="Wooden Table" />
+        <h3 class="product-name">Wooden Table</h3>
+        <p class="product-price">₦300,000</p>
+        <span class="sold-out-label">Sold Out</span>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification">Item added to cart!</div>
+
+    <!-- Checkout Button -->
+    <div class="checkout-container">
+      <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+    </div>
+
+    <script src="order.js"></script>
+  </body>
+</html>
