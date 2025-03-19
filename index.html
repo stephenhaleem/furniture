@@ -80,9 +80,13 @@
           </div>
         </nav>
       </header>
+      <div class="hero-background"></div>
       <div class="hero-content">
         <h2>Crafting Timeless Furniture for Modern Living</h2>
-        <a href="#products" class="show-more-btn">Explore Our Collection</a>
+        <div class="hero-ctas">
+          <a href="#products" class="show-more-btn">Explore Our Collection</a>
+          <a href="order.html" class="shop-now-btn">Shop Now</a>
+        </div>
       </div>
     </section>
 
@@ -108,20 +112,23 @@
     </section>
 
     <section id="featured">
-      <img src="images/chair.jpg" alt="Featured Chair" />
+      <div class="featured-image">
+        <div class="image-slider">
+          <img
+            src="images/ca41235d-f8c9-4685-9114-d68e5e07097e.png"
+            alt="Lux Chair"
+          />
+          <!-- Add more images for carousel -->
+        </div>
+      </div>
       <div class="featured-content">
         <h2>Lux Chair</h2>
-        <div class="italics">
-          <p><i>The yellow leather edition.</i></p>
+        <p><i>The yellow leather edition.</i></p>
+        <p>A stunning piece combining modern design with timeless elegance.</p>
+        <div class="featured-ctas">
+          <a href="#order" class="learn-more-btn">Learn More</a>
+          <button class="add-to-cart-btn">Add to Cart</button>
         </div>
-
-        <p>
-          A stunning piece of furniture that combines modern design with
-          timeless elegance. Its distinctive shape and bright yellow color make
-          it a real eye-catcher in any room. The chair is not only stylish but
-          also comfortable and soft.
-        </p>
-        <a href="#order" class="learn-more-btn">Learn More</a>
       </div>
     </section>
 
@@ -132,23 +139,32 @@
         </div>
         <div class="about-text">
           <h2 class="about-heading">About FurniCraft</h2>
-          <p class="about-description">
-            At FurniCraft, we blend innovation with timeless elegance to craft
-            unique furniture pieces. Our journey started with a passion for
-            excellence, ensuring that every product meets the highest standards
-            of quality and design.
+          <p>
+            Since 2010, we’ve crafted furniture that blends innovation with
+            elegance.
           </p>
-          <p class="about-description">
-            From contemporary to classic styles, our collection is designed to
-            bring comfort and beauty to your space.
-          </p>
+          <div class="timeline">
+            <p><strong>2010:</strong> Founded with a vision for quality.</p>
+            <p><strong>2025:</strong> Celebrating 15 years of excellence.</p>
+          </div>
           <a href="about.html" class="btn about-btn">Read More</a>
         </div>
       </div>
     </section>
-
     <footer>
-      <p>© 2025 FurniCraft</p>
+      <div class="footer-container">
+        <div class="footer-links">
+          <a href="#">Home</a>
+          <a href="#products">Products</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <i class="bx bxl-instagram"></i>
+          <i class="bx bxl-facebook"></i>
+          <i class="bx bxl-twitter"></i>
+        </div>
+        <p>© 2025 FurniCraft</p>
+      </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>

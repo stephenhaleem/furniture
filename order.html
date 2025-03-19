@@ -5,33 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order - FurniCraft</title>
     <link rel="stylesheet" href="order.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;700&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
     <!-- Navbar -->
-    <nav>
-      <div class="logo">FurniCraft</div>
-      <ul class="nav-links">
-        <li><a href="#">Sofas</a></li>
-        <li><a href="#">Chairs</a></li>
-        <li><a href="#">Tables</a></li>
-        <li><a href="#">Beds</a></li>
-        <li><a href="#">Cabinets</a></li>
-      </ul>
-      <div
-        class="cart"
-        onclick="window.location.href='cart.html'"
-        style="cursor: pointer"
-      >
-        <span id="cart-count">0</span>
-        🛒
+    <nav class="header">
+      <div class="nav container">
+        <a href="#" class="nav__logo">FurniCraft</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Sofas</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Chairs</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Tables</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Beds</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Cabinets</a>
+            </li>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="bx bx-x"></i>
+          </div>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+        <div class="cart" onclick="window.location.href='cart.html'">
+          <i class="bx bx-cart"></i>
+          <span id="cart-count">0</span>
+        </div>
       </div>
     </nav>
 
+    <!-- Filters Section -->
+    <section class="filters">
+      <div class="filter-container">
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search products..."
+          />
+          <i class="bx bx-search"></i>
+        </div>
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="sofas">Sofas</option>
+          <option value="chairs">Chairs</option>
+          <option value="tables">Tables</option>
+        </select>
+        <select id="price-filter">
+          <option value="all">All Prices</option>
+          <option value="low">₦0 - ₦300,000</option>
+          <option value="mid">₦300,001 - ₦600,000</option>
+          <option value="high">₦600,001+</option>
+        </select>
+        <select id="sort-filter">
+          <option value="default">Sort By: Default</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+          <option value="name-desc">Name: Z to A</option>
+        </select>
+      </div>
+    </section>
+
     <!-- Products Section -->
-    <div class="products">
-      <div class="product-card" data-name="Luxury Sofa" data-price="500000">
-        <img src="images/11444657.png" alt="Luxury Sofa" />
+    <section class="products">
+      <div
+        class="product-card"
+        data-name="Luxury Sofa"
+        data-price="500000"
+        data-category="sofas"
+      >
+        <img src="images/11444657.png" alt="Luxury Sofa" loading="lazy" />
         <h3 class="product-name">Luxury Sofa</h3>
         <p class="product-price">
           ₦500,000 <span class="discount">₦650,000</span>
@@ -39,20 +93,30 @@
         <button class="add-to-cart">Add to Cart</button>
       </div>
 
-      <div class="product-card" data-name="Elegant Chair" data-price="250000">
-        <img src="images/760.jpg" alt="Elegant Chair" />
+      <div
+        class="product-card"
+        data-name="Elegant Chair"
+        data-price="250000"
+        data-category="chairs"
+      >
+        <img src="images/760.jpg" alt="Elegant Chair" loading="lazy" />
         <h3 class="product-name">Elegant Chair</h3>
         <p class="product-price">₦250,000</p>
         <button class="add-to-cart">Add to Cart</button>
       </div>
 
-      <div class="product sold-out">
-        <img src="table.jpg" alt="Wooden Table" />
+      <div
+        class="product-card sold-out"
+        data-name="Wooden Table"
+        data-price="300000"
+        data-category="tables"
+      >
+        <img src="table.jpg" alt="Wooden Table" loading="lazy" />
         <h3 class="product-name">Wooden Table</h3>
         <p class="product-price">₦300,000</p>
         <span class="sold-out-label">Sold Out</span>
       </div>
-    </div>
+    </section>
 
     <!-- Notification -->
     <div id="notification">Item added to cart!</div>

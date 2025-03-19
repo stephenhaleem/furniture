@@ -1,22 +1,25 @@
 // Hero animations
+gsap.from(".hero-background", {
+  scrollTrigger: {
+    trigger: "#hero",
+    scrub: true,
+  },
+  y: "20%",
+  ease: "none",
+});
+
 gsap.from(".hero-content h2", {
-  duration: 1.5,
+  duration: 1.2,
   opacity: 0,
-  y: 50,
+  y: 60,
   ease: "power3.out",
 });
-gsap.from(".show-more-btn", {
-  duration: 1.5,
+gsap.from(".hero-ctas a", {
+  duration: 1,
   opacity: 0,
-  y: 50,
+  y: 40,
+  stagger: 0.2,
   delay: 0.5,
-  ease: "power3.out",
-});
-gsap.from("#hero img", {
-  duration: 1.5,
-  opacity: 0,
-  scale: 0.9,
-  delay: 0.2,
   ease: "power3.out",
 });
 
@@ -133,3 +136,10 @@ gsap.from(".about-btn", {
     toggleActions: "play none none none",
   },
 });
+const images = document.querySelectorAll(".image-slider img");
+let current = 0;
+setInterval(() => {
+  images[current].style.opacity = 0;
+  current = (current + 1) % images.length;
+  images[current].style.opacity = 1;
+}, 3000);
