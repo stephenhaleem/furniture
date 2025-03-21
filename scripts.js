@@ -143,3 +143,83 @@ setInterval(() => {
   current = (current + 1) % images.length;
   images[current].style.opacity = 1;
 }, 3000);
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Animate Brand Logos
+  gsap.from(".brand-logo", {
+    opacity: 0,
+    y: 20,
+    stagger: 0.2,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#brand-partners",
+      start: "top 80%",
+    },
+  });
+
+  // Animate Heading
+  gsap.from("#brand-partners h2", {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#brand-partners",
+      start: "top 80%",
+    },
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const newsletterForm = document.getElementById("newsletter-form");
+  const newsletterEmail = document.getElementById("newsletter-email");
+
+  newsletterForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = newsletterEmail.value.trim();
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    alert("Thank you for subscribing to our newsletter!");
+    newsletterForm.reset();
+  });
+
+  // Animate Newsletter Section
+  gsap.from("#newsletter h2", {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#newsletter",
+      start: "top 80%",
+    },
+  });
+
+  gsap.from("#newsletter-form", {
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#newsletter",
+      start: "top 80%",
+    },
+  });
+
+  // Animate Footer
+  gsap.from(".footer-column", {
+    opacity: 0,
+    y: 20,
+    stagger: 0.2,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#footer",
+      start: "top 80%",
+    },
+  });
+});

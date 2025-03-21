@@ -289,3 +289,99 @@ h2 {
 #notification.show {
   display: block;
 }
+
+/* Add these media queries at the end of cart.css */
+
+@media (max-width: 767px) {
+  .cart-container {
+    margin: 80px auto 20px;
+    padding: 20px;
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .cart-table {
+    display: block; /* Convert table to block for mobile */
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .cart-table th,
+  .cart-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+    min-width: 100px; /* Ensure columns don’t collapse too much */
+  }
+
+  .cart-table td img {
+    width: 40px;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .coupon-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #coupon-code,
+  #apply-coupon,
+  #clear-cart {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cart-summary {
+    padding: 15px;
+  }
+
+  .cart-summary h3 {
+    font-size: 1.2rem;
+  }
+
+  .cart-summary p {
+    font-size: 1rem;
+  }
+
+  .checkout-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1149px) {
+  .cart-container {
+    width: 85%;
+    padding: 25px;
+  }
+
+  .cart-table th,
+  .cart-table td {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .cart-table td img {
+    width: 45px;
+  }
+
+  .cart-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .coupon-section {
+    flex-direction: row;
+    width: auto;
+  }
+
+  #coupon-code {
+    width: 180px;
+  }
+}
